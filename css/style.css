@@ -1,8 +1,24 @@
 *{
     margin: 0;
 }
+
 li{
     font-size: 25px;
     list-style: none;
-    margin-right:130px;
+    
+    margin-top: 15px;
+    margin-right: 80px;
+}
+
+p{
+    display: flex;
+    
+}
+
+input[type="button"]{
+    margin-left: 20px;
+}
+
+.list-wrapper{
+ margin-left: 20px;   
 }
