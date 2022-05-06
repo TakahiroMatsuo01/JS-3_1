@@ -11,8 +11,8 @@ addBtn.addEventListener('click',function addValue(){
             newBtn.name='name'
             newBtn.value='完了'
     
-    const wrapper=document.createElement('div');
-            wrapper.className='list-wrapper';
+    const newDiv=document.createElement('div');
+            newDiv.className='list-wrapper';
     const controlBtn = document.createElement('input');
             controlBtn.type='button';
             controlBtn.name='name';
@@ -22,7 +22,7 @@ addBtn.addEventListener('click',function addValue(){
     const para= document.createElement('p')
   
     let object = [{ status:`${get_txt}`}];
-    object.push(`${get_txt}`);
+    
     object.forEach(function(status_o,index) {
        index++;
        status_o=`${index}\b\b\b${object.status}`
@@ -30,8 +30,8 @@ addBtn.addEventListener('click',function addValue(){
           newLi.appendChild(para).textContent = status_o;
         //   object.push(status);
           para.appendChild(wrapper);
-        wrapper.appendChild(newBtn);
-        wrapper.appendChild(controlBtn);
+        newDiv.appendChild(newBtn);
+        newDiv.appendChild(controlBtn);
 
 });
 
