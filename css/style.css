@@ -2,17 +2,15 @@
     margin: 0;
 }
 
-li{
+td{
     font-size: 25px;
     list-style: none;
-    
     margin-top: 15px;
-    margin-right: 80px;
+    margin-right: 40px;
 }
 
-p{
-    display: flex;
-    
+tr{
+    display: flex;  
 }
 
 input[type="button"]{

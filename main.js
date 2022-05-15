@@ -3,39 +3,39 @@ const addBtn = document.getElementById('addBtn');
 const tasks = [];
 
 addBtn.addEventListener('click',function addValue(){
-        const get_txt = document.getElementById('txt_data').value;
-        const str_p = document.getElementById('start_point');
-        const newLi = document.createElement('li');
-        const newBtn= document.createElement('input');
-        newBtn.type='button';
-        newBtn.name='name'
-        newBtn.value='完了'
+        const get_Txt = document.getElementById('txt_data').value;
+        const start_point = document.getElementById('start_point');
+        const newTable = document.createElement('table');
+        const completeBtn= document.createElement('input');
+        completeBtn.type='button';
+        completeBtn.name='name'
+        completeBtn.value='完了'
 
         const newDiv=document.createElement('div');
         newDiv.className='list-wrapper';
-        const controlBtn = document.createElement('input');
-        controlBtn.type='button';
-        controlBtn.name='name';
-        controlBtn.value='削除';
+        const deleteBtn = document.createElement('input');
+        deleteBtn.type='button';
+        deleteBtn.name='name';
+        deleteBtn.value='削除';
 
-        const emp =document.createElement('br');
-        const para= document.createElement('p')
-
+        const newTr = document.createElement('tr')
+        const newTd=document.createElement('td')
+        const newTd_2 =document.createElement('td');
         const task={
-                name:"task1",
-                status:get_txt
+                name:'task1',
+                status:get_Txt
         }
 
 tasks.push(task);
 
-tasks.forEach(function(status_o,index) {
-        status_o = task.status
+tasks.forEach(function(task,index) {
+        task = task.status
         index +=1;
-        
-        str_p.appendChild(newLi);
-        newLi.appendChild(para).textContent =`${index}\b\b\b${status_o}`;
-        para.appendChild(newDiv);
-        newDiv.appendChild(newBtn);
-        newDiv.appendChild(controlBtn);       
+        start_point.appendChild(newTable);
+        newTable.appendChild(newTr);
+        newTr.appendChild(newTd).textContent =`${index}`;
+        newTr.appendChild(newTd_2).textContent=`${task}`;
+        newTd_2.appendChild(completeBtn);
+        newTd_2.appendChild(deleteBtn);       
         });
 });
