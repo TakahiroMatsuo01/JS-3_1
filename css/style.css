@@ -13,10 +13,6 @@ tr{
     display: flex;  
 }
 
-input[type="button"]{
+button[type="button"]{
     margin-left: 20px;
-}
-
-.list-wrapper{
- margin-left: 20px;   
 }

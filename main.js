@@ -3,39 +3,37 @@ const addBtn = document.getElementById('addBtn');
 const tasks = [];
 
 addBtn.addEventListener('click',function addValue(){
-        const get_Txt = document.getElementById('txt_data').value;
-        const start_point = document.getElementById('start_point');
+        const inputTxt = document.getElementById('txt_data').value;
+        const table = document.getElementById('table');
         const newTable = document.createElement('table');
-        const completeBtn= document.createElement('input');
-        completeBtn.type='button';
-        completeBtn.name='name'
-        completeBtn.value='完了'
+        const statusBtn= document.createElement('button');
+        statusBtn.type='button';
+        statusBtn.name='complete'
+        statusBtn.textContent='完了'
 
-        const newDiv=document.createElement('div');
-        newDiv.className='list-wrapper';
-        const deleteBtn = document.createElement('input');
+        const deleteBtn = document.createElement('button');
         deleteBtn.type='button';
-        deleteBtn.name='name';
-        deleteBtn.value='削除';
+        deleteBtn.name='delete';
+        deleteBtn.textContent='削除';
 
         const newTr = document.createElement('tr')
         const newTd=document.createElement('td')
         const newTd_2 =document.createElement('td');
         const task={
-                name:'task1',
-                status:get_Txt
+                name:inputTxt,
+                status:'sample_status'
         }
 
 tasks.push(task);
 
 tasks.forEach(function(task,index) {
-        task = task.status
+        task = task.name;
         index +=1;
-        start_point.appendChild(newTable);
+        table.appendChild(newTable);
         newTable.appendChild(newTr);
         newTr.appendChild(newTd).textContent =`${index}`;
         newTr.appendChild(newTd_2).textContent=`${task}`;
-        newTd_2.appendChild(completeBtn);
+        newTd_2.appendChild(statusBtn);
         newTd_2.appendChild(deleteBtn);       
         });
 });
