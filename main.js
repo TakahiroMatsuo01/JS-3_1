@@ -21,7 +21,7 @@ addBtn.addEventListener('click',function addValue(){
         const newTd_2 =document.createElement('td');
         const task={
                 name:inputTxt,
-                status:'sample_status'
+                status:''
         }
 
 tasks.push(task);
