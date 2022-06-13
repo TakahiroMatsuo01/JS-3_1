@@ -21,18 +21,20 @@ addBtn.addEventListener('click',function addValue(){
         const newTd_2 =document.createElement('td');
         const task={
                 name:inputTxt,
-                status:''
+                status:1
         }
-
+if(task.status==1){
+        statusBtn.textContent='作業中'
+}
 tasks.push(task);
 
-tasks.forEach(function(task,index) {
-        task = task.name;
+tasks.forEach(function(taskdata,index) {
+        taskdata = task.name;
         index +=1;
         table.appendChild(newTable);
         newTable.appendChild(newTr);
         newTr.appendChild(newTd).textContent =`${index}`;
-        newTr.appendChild(newTd_2).textContent=`${task}`;
+        newTr.appendChild(newTd_2).textContent=`${taskdata}`;
         newTd_2.appendChild(statusBtn);
         newTd_2.appendChild(deleteBtn);       
         });
